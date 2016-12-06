@@ -1,0 +1,31 @@
+<navbar-head></navbar-head>
+<under-navbar-head [home]="title"></under-navbar-head>
+<slider></slider>
+<div class="container">
+	<introduction></introduction>
+	<div class="row span8 main col-xs-6 col-md-10">
+		<h2>
+			<p>Introducts</p>
+		</h2>
+		<shoes-item class="col-md-6" *ngFor="let myShoes of shoesList" [shoesItem]="myShoes"></shoes-item>
+		<div class="row rating-desc">
+			<div class="col-md-12 col-md-offset-10">
+				<a href="#">1</a> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">>></a>
+			</div>
+		</div>
+	</div>
+	<div class='col-xs-6 col-md-2 span2 sidebar'>
+		<h3>Advertising</h3>
+		<ul class="nav nav-tabs nav-stacked">
+			<li>
+				<a href='#'><img src="../assets/images/slide2.jpg" class="adv-image" alt="Advertising"></a>
+			</li>
+			<li>
+				<a href='#'><img src="../assets/images/slide2.jpg" class="adv-image" alt="Advertising"></a>
+			</li>
+			<li>
+				<a href='#'><img src="../assets/images/slide2.jpg" class="adv-image" alt="Advertising"></a>
+			</li>
+		</ul>
+	</div>
+</div>

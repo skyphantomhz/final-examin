@@ -1,0 +1,15 @@
+.item-size{
+  height: 25em;
+}
+.navbar{
+    border-radius: 0;
+    margin-bottom: 0px;
+}
+.navbar-under{
+    background-color: #fff;
+}
+
+.navbar-brand{
+    font-family: 'Satisfy', cursive;
+}
+

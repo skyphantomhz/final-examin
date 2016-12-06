@@ -1,0 +1,38 @@
+<nav class="navbar navbar-inverse navbar-under">
+	<div class="container-fluid">
+		<!--header-->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar"></button>
+			<div class="navbar-brand ">Beautiful Shoes Shop</div>
+		</div>
+		<!-- Items -->
+		<div class="collapse navbar-collapse" id="topNavBar">
+			<ul class="nav navbar-nav navbar-right">
+				<li *ngIf="home != 'true'" class="">
+					<a href="#/index">
+						Home
+					</a>
+				</li>
+				<li class="">
+					<a href="#">
+						Event
+					</a>
+				</li>
+				<li class="">
+					<a href="#">
+						Categories
+					</a>
+				</li>
+				<li>
+					<form class="navbar-form navbar-right search-form" role="search" method="get" action="#">
+						<div class="form-group">
+							<label for="search" class="sr-only">Search</label>
+							<input type="text" class="form-control" name="q" value="">
+							<span class="glyphicon glyphicon-search form-control-feedback"></span>
+						</div>
+					</form>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
