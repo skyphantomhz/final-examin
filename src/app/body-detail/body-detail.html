@@ -9,16 +9,11 @@
 <div class="span8 main col-xs-6 col-md-10">
     <div class="col-xs-6 col-md-10">
 	<div class="col-xs-6 col-md-5">
-		<img src="http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwce32303b/zoom/M20324_01_standard.jpg?sw=640&sfrm=jpg"
-			alt="bootsnipp" class="img-rounded img-responsive" />
+		<img [src]="myShoes.imageUrl" alt="bootsnipp" class="img-rounded img-responsive" />
 	</div>
 	<div class="col-xs-6 col-md-7">
 		<h3>Details</h3>
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;Adidas was registered on 18 August 1949 by Adolf Dassler, following a family feud at the Gebrüder
-			Dassler Schuhfabrik company between him and his older brother Rudolf.[1] Rudolf had earlier established Puma, which quickly
-			became the business rival of Adidas and is also headquartered in Herzogenaurach. The company's clothing and shoe designs
-			typically feature three parallel bars, and the same motif is incorporated into Adidas's current official logo.[4][5] The
-			brand name is uncapitalized, with a lower case "a".
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;{{myShoes.detail}}
 		</p>
 	</div>
 	<br/>
@@ -30,39 +25,18 @@
 	<br/>
 	<br/>
 	<ul class="nav nav-tabs col-md-10">
-		<li class="active"><a href="#tab_a" data-toggle="tab">Tab A</a></li>
-		<li><a href="#tab_b" data-toggle="tab">Tab B</a></li>
-		<li><a href="#tab_c" data-toggle="tab">Tab C</a></li>
-		<li class="dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Tab D <span class="caret"></span></a>
-			<ul class="dropdown-menu">
-				<li><a href="#tab_d1" data-toggle="tab">Tab D 1</a></li>
-				<li><a href="#tab_d2" data-toggle="tab">Tab D 2</a></li>
-			</ul>
-			<!-- end of dropdown menu -->
-		</li>
+		<li class="active"><a href="#tab_a" data-toggle="tab">Description</a></li>
+		<li><a href="#tab_b" data-toggle="tab">Reviews</a></li>
 	</ul>
 </div>
 	<!-- end of nav -->
 	<div class="tab-content col-xs-6 col-md-10">
 		<div class="tab-pane active" id="tab_a">
-			<h4>Pane A</h4>
+			<h4>Pane A{{id}}</h4>
 			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 		</div>
 		<div class="tab-pane" id="tab_b">
 			<h4>Pane B</h4>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		</div>
-		<div class="tab-pane" id="tab_c">
-			<h4>Pane C</h4>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		</div>
-		<div class="tab-pane" id="tab_d1">
-			<h4>Pane D1</h4>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		</div>
-		<div class="tab-pane" id="tab_d2">
-			<h4>Pane D2</h4>
 			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 		</div>
 	</div>
