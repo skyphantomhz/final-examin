@@ -1,0 +1,15 @@
+.image-item{
+    width: 8em;
+}
+.fifteenem{
+    /*width: 15em;*/
+    width: 10em;
+    overflow: scroll;
+    height: 5em;
+}
+.thirtyfiveem{
+    /*width: 35em;*/
+    width: 20em;
+    overflow: scroll;
+    height: 10em;
+}

@@ -3,17 +3,17 @@
 <slider></slider>
 <div class="container">
 <h2>
-	<p>Product title</p>
+	<p>{{myProduct.name}}</p>
 </h2>
 
 <div class="span8 main col-xs-6 col-md-10">
     <div class="col-xs-6 col-md-10">
 	<div class="col-xs-6 col-md-5">
-		<img [src]="myShoes.imageUrl" alt="bootsnipp" class="img-rounded img-responsive" />
+		<img [src]="myProduct.image" alt="bootsnipp" class="img-rounded img-responsive" />
 	</div>
 	<div class="col-xs-6 col-md-7">
 		<h3>Details</h3>
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;{{myShoes.detail}}
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;{{myProduct.content}}
 		</p>
 	</div>
 	<br/>
@@ -33,7 +33,7 @@
 	<div class="tab-content col-xs-6 col-md-10">
 		<div class="tab-pane active" id="tab_a">
 			<h4>Pane A{{id}}</h4>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+			<p>{{myProduct.description}}</p>
 		</div>
 		<div class="tab-pane" id="tab_b">
 			<h4>Pane B</h4>

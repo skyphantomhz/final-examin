@@ -1,21 +1,17 @@
-import { Component, OnInit, Injectable, EventEmitter } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Product } from '../bean/product';
+import {Component} from '@angular/core';
+import {Product} from '../bean/product';
 @Component({
-    styleUrls: ['./body-detail.css'],
-    outputs: ['namePage'],
-    templateUrl: './body-detail.html'
+  selector   : 'show-product',
+  templateUrl: './show-product.html',
+  styleUrls: ['./show-product.css']
 })
-
-export class BodyDetailComponent {
-    titlePage: string;
-    myProduct: Product;
-    id: number;
-    private sub: any;
-    constructor(private route: ActivatedRoute) {
-
-        this.titlePage = '| Products';
-        this.myProduct = new Product(1,
+export class ShowProduct {
+  bool: number;
+  ProductList: Product[];
+  constructor(){
+    this.bool=1;
+    this.ProductList = [
+            new Product(1,
                 'Products title',
                 'hjh',
                 'Adidas AG (German pronunciation:) (stylized as ɑdidɑs) is a German multinational corporation that designs and manufactures sports shoes',
@@ -26,14 +22,6 @@ export class BodyDetailComponent {
                 1,
                 '1/21/2017',
                 '1/21/2017') 
-
-    }
-    ngOnInit() {
-        this.sub = this.route.params.subscribe(params => {
-            this.id =params['id']; // (+) converts string 'id' to a number
-
-        });
-    }
-
-
+        ];
+  }
 }

@@ -1,0 +1,38 @@
+<div class="col-xs-10 col-md-5">
+	<a href="/#/insert" class="btn btn-primary btn-lg active" role="button">Insert</a>
+</div>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Slug</th>
+			<th>Description</th>
+			<th>Content</th>
+			<th>Price</th>
+			<th>Image</th>
+			<th>admin_id</th>
+			<th>Toocategory_id</th>
+			<th>created_at</th>
+			<th>modified_at</th>
+			<th>tool</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let product of ProductList">
+			<td>{{product.id}}</td>
+			<td>{{product.name}}</td>
+			<td>{{product.slug}}</td>
+			<td><p class="fifteenem">{{product.description}}</p></td>
+			<td><p class="thirtyfiveem">{{product.content}}</p></td>
+			<td>{{product.price}}</td>
+			<td><img [src]="product.image" alt="images" class="image-item"></td>
+			<td>{{product.admin_id}}</td>
+			<td>{{product.category_id}}</td>
+			<td>{{product.created_at}}</td>
+			<td>{{product.modified_at}}</td>
+			<td><a href="#">Update </a><a href="#">Delete</a></td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,101 @@
+<script>$("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+});</script>
+
+
+<navbar-head [title]="titlePage"></navbar-head>
+<div id="wrapper" class="active">
+	<!-- Sidebar -->
+	<!-- Sidebar -->
+
+	<div id="sidebar-wrapper">
+		<ul id="sidebar_menu" class="sidebar-nav">
+			<li class="sidebar-brand"><a id="menu-toggle" href="/admin">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+		</ul>
+		<ul class="sidebar-nav" id="sidebar">
+			<li><a>Products<span class="sub_icon halflings halflings-folder-open"></span></a></li>
+			<li><a>Report<span class="sub_icon halflings halflings-tags"></span></a></li>
+			<li><a>Contact<span class="sub_icon glyphicons glyphicons-user-conversation"></span></a></li>
+		</ul>
+	</div>
+
+	<!-- Page content -->
+	<div id="page-content-wrapper">
+		<!-- Keep all page content within the page-content inset div! -->
+
+
+		<div class="page-content inset">
+			<div class="row">
+				<div class="col-md-12">
+					<p class="well lead">Insert Product</p>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-8 contact-form">
+								<!-- div da direita -->
+								<form id="contact" class="form" name="form" (ngSubmit)="f.form.valid && insert()" #f="ngForm" novalidate>
+									<div class="row">
+										<div class="col-xs-4 col-md-2 form-group" [ngClass]="{ 'has-error': f.submitted && !nameproduct.valid }">
+											<input type="text" class="form-control" name="nameproduct" placeholder="nameProduct" [(ngModel)]="model.nameproduct" #nameproduct="ngModel"
+												required/>
+											<div *ngIf="f.submitted && !nameproduct.valid" class="help-block">name is required</div>
+										</div>
+										<div class="col-xs-4 col-md-10 form-group" [ngClass]="{ 'has-error': f.submitted && !slug.valid }">
+											<input class="form-control" id="slug" name="slug" placeholder="slug" type="text" [(ngModel)]="model.slug" #slug="ngModel"
+												required/>
+											<div *ngIf="f.submitted && !slug.valid" class="help-block">slug is required</div>
+										</div>
+									</div>
+
+									<div class="row">
+
+										<div class="col-xs-4 col-md-3 form-group" [ngClass]="{ 'has-error': f.submitted && !price.valid }">
+											<input class="form-control" id="price" name="price" placeholder="price" type="text" [(ngModel)]="model.price" #price="ngModel"
+												required>
+											<div *ngIf="f.submitted && !price.valid" class="help-block">price is required</div>
+										</div>
+										<div class="col-xs-4 col-md-2 form-group">
+											<select class="form-control" name="category" [(ngModel)]="model.category" #category="ngModel" placeholder="category" required>
+                                                <option *ngFor="let category of categoryList">{{category.name}}</option>
+							
+                                            </select>
+										</div>
+									</div>
+									<div class="col-xs-4 col-md-12 form-group" [ngClass]="{ 'has-error': f.submitted && !description.valid }">
+										<div class="controls">
+											<input class="form-control" id="description" name="description" placeholder="description" type="text" [(ngModel)]="model.description"
+												#description="ngModel" required>
+											<div *ngIf="f.submitted && !description.valid" class="help-block">Description is required</div>
+										</div>
+
+									</div>
+									<br>
+									<!--fim Text input cidade e estado-->
+									<div class="col-xs-4 col-md-12 form-group" [ngClass]="{ 'has-error': f.submitted && !content.valid }">
+										<div class="controls">
+											<textarea class="form-control" id="content" name="content" placeholder="content" rows="5" [(ngModel)]="model.content" #content="ngModel"
+												required></textarea>
+											<div *ngIf="f.submitted && !content.valid" class="help-block">Description is required</div>
+										</div>
+									</div>
+									<br />
+
+									<div class="row">
+										<div class="col-xs-12 col-md-12 form-group">
+											<button class="btn btn-primary pull-right" [disabled]="loading">Submit</button>&nbsp; &nbsp; &nbsp;
+											<button class="btn btn-primary pull-right" type="reset">Reset</button>
+											<!--<button class="btn btn-primary pull-right" type="submit">Enviar</button>-->
+										</div>
+									</div>
+								</form>
+							</div>
+							<!-- fim div da direita -->
+						</div>
+						<!-- fim div da esquerda -->
+					</div>
+					<p class="well lead">An Experiment using the sidebar (<a href="http://animeshmanglik.name">animeshmanglik.name</a>)</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

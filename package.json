@@ -42,6 +42,7 @@
     "core-js": "^2.4.1",
     "ie-shim": "^0.1.0",
     "ng2-bootstrap": "^1.1.16",
+    "ng2-ck-editable": "^0.1.7",
     "reflect-metadata": "^0.1.3",
     "rxjs": "5.0.0-beta.12",
     "semantic-ui": "^2.2.4",
